@@ -1,0 +1,23 @@
+<section class="room-area">
+    <div class="room-area-inner">
+        <img src="/assets/img/room-3.jpg" class="bg-img">
+
+        <btn-plus
+                *ngFor="let btnInfo of buttons"
+                [info]="btnInfo"
+                BtnPlusDirective
+                [isDisabled]="btnInfo.isDisabled"
+                [matTooltip]="btnInfo.name"
+                [isDisabled]="btnInfo.isDisabled"
+                (click)="openInventory(btnInfo)">
+        </btn-plus>
+
+        <div class="btn-my-inv-area">
+            <button type="button" class="btn-my-inv" mat-raised-button (click)="openMyItemList(myInventoryItems)">My Inventory Items</button>
+        </div>
+
+        <room-nav [navData]="roomNav"></room-nav>
+    </div>
+</section>
+
+

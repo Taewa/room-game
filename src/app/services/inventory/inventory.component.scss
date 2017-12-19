@@ -1,0 +1,28 @@
+.selected-item{
+    width: 200px;
+}
+.item-list-area{
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    width: 100%;
+    color:#fff;
+
+    .my-item-list{
+        display: flex;
+        justify-content: flex-end;
+    }
+
+    .my-item{
+        width: 100px;
+        margin: 10px;
+
+        img{
+            width: 100%;
+        }
+    }
+
+    .inventory-title{
+        text-align: right;
+    }
+}

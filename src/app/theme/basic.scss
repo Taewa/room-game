@@ -1,0 +1,26 @@
+//Normalize.css is inserted in .angulr-cli.json
+//font.scss is inserted in .angulr-cli.json
+html, body{
+    height: 100%;
+    background: #000;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+}
+
+//body, button {
+//    font-family: 'Gotham-Book';
+//}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}

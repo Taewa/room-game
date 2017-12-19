@@ -1,0 +1,15 @@
+:host{
+    position: absolute;
+}
+.btn-plus{
+    width: 1.8vw;
+    height: 1.8vw;
+    background: #ed4343;
+    color: #fff;
+    padding: 0px;
+    font-size: 1.4vw;
+
+    &[disabled]{
+        background: gray;
+    }
+}

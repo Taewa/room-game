@@ -1,0 +1,38 @@
+import {InventoryService} from '../services/inventory/inventory.service';
+import {TotalItemsService} from '../services/total-items/total-items.service';
+import {Info} from '../components/btns/btn-plus/btn-plus.component';
+import {MyItemListModalService} from '../services/my-item-list-modal/my-item-list-modal.service';
+
+
+export abstract class RoomAbstraction {
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // Properties
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    myInventoryItems: Array<any>;
+
+
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // Constructor
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    constructor(public inventory: InventoryService,
+                public totalItems: TotalItemsService,
+                public myItemListModal: MyItemListModalService) {
+        this.myInventoryItems = this.inventory.myItems;
+    }
+
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    // Methods
+    ////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+    openInventory(data: Info): void {
+        this.inventory.openInventory(data);
+    }
+
+    getRoomData(roomName: string): Array<Info> {
+        return this.totalItems.totalItem(roomName);
+    }
+
+    openMyItemList(): void {
+        this.myItemListModal.openModal(this.myInventoryItems);
+    }
+}

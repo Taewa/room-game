@@ -1,0 +1,10 @@
+<div class="my-item-list">
+
+    <div *ngFor="let item of data.itemList"
+         class="my-item"
+         [matTooltip]="item.name"
+         matTooltipPosition="above">
+        {{item.name}}
+        <img src="{{item.src}}">
+    </div>
+</div>

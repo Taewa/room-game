@@ -1,0 +1,19 @@
+<button type="button" matDialogClose>RETOUR</button>
+<button type="button" (click)="addItem(data.data)" [disabled]="isCameraDisabled">Camera ( {{data.items.length}} / 10 )</button>
+
+<h1 style="color:#fff;">{{data.data.name}}</h1>
+<img src="{{data.data.src}}" class="selected-item">
+
+
+<section class="item-list-area">
+    <p class="inventory-title">INVENTAIRE</p>
+
+    <div class="my-item-list">
+        <div *ngFor="let item of data.items" class="my-item">
+            {{item.name}}
+            <img src="{{item.src}}">
+        </div>
+    </div>
+
+</section>
+
